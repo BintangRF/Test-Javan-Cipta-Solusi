@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import arrow from "../assets/arrow.svg";
 
-const Input = () => {
+const InputURL = () => {
   const [inputIsActive, setInputIsActive] = useState(false);
 
   const handleInputFocus = () => {
@@ -19,15 +18,14 @@ const Input = () => {
       } rounded px-2 py-3 flex justify-between`}>
       <input
         type="text"
-        placeholder="Select..."
+        placeholder="URL Task"
         className="w-full text-xl"
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
         autoComplete="on"
       />
-      <img src={arrow} alt="" />
     </div>
   );
 };
 
-export default Input;
+export default InputURL;
