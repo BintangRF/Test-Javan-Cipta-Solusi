@@ -14,12 +14,12 @@ const Input = ({ placeholder, image, value, onChange }) => {
   return (
     <div
       className={`border ${
-        inputIsActive ? "border-blue-800" : "border-gray-200"
-      } rounded px-2 py-3 flex justify-between`}>
+        inputIsActive ? "border-blue-800" : "border-gray-300"
+      } rounded px-[1px] py-[3px] flex justify-between`}>
       <input
         type="text"
         placeholder={placeholder}
-        className="w-full text-xl"
+        className="w-full px-1 text-lg"
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
         value={value}
