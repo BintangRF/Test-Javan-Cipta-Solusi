@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import arrow from "../assets/arrow.svg";
 
-const Input = () => {
+const Input = ({ placeholder, image, value, onChange }) => {
   const [inputIsActive, setInputIsActive] = useState(false);
 
   const handleInputFocus = () => {
@@ -19,13 +18,15 @@ const Input = () => {
       } rounded px-2 py-3 flex justify-between`}>
       <input
         type="text"
-        placeholder="Select..."
+        placeholder={placeholder}
         className="w-full text-xl"
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
+        value={value}
+        onChange={onChange}
         autoComplete="on"
       />
-      <img src={arrow} alt="" />
+      <img src={image} alt="" />
     </div>
   );
 };
